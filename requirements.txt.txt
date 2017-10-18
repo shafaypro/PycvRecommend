@@ -1,0 +1,4 @@
+pdfminer3x
+python-docs
+ntpath
+urllib

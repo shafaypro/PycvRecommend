@@ -1,0 +1,66 @@
+-------------------------PLANNING ------------------------------------
+1 - We will get a folder with complete extensions (.word, .pdf others)
+1.1 - Text reader Generator (with different files format
+1.2 - PDF reader Generator
+1.2.1- Pages by pages translation or Complete conversion
+1.3 - word reader generator
+1.3.1 - XML formatiing
+1.3.2 - use Beautifulsoup for Scraping of xml tags (unique tags in the word file)
+1.4 - HTML PAGE READER(THOSE WHO HAVE WEB CSV's )
+------------------------IMPLEMENTATION -------------------------------------------
+
+                        --CLASS CREATION----
+1 - a single file creation with a single class init , identifying classname as "FilesToTextFiles" .
+                        ---PDF FLOW CREATION--
+2 - a function created as "readPDF()" which responsibility will be converting pdf to text of certain file.
+3 - readPDF() , a sample file was kept in the same directory as per script , and was opened through file handling in python
+4 - Reading the file through file handling of the pdf
+5 - Encoding Errors and incorrect conversion and formats ASCII  (revert 4)
+6 - Installation of the pypdf module was required in general , for pdf conversion.
+7 - pypdf only works with python 2.7 and not well with python 3.5 , REVERT 6
+8 - pypdf2 only works with python 2, Revert self as well.
+9 - pdfminer module was installed using the pip3 requirements , module outdated and moved to pdfminer3k
+10 - pdfminer3k was installed using the pip3 python 3 version
+11 - pdfminer3k was used to have multiple Resource files.
+12 - pdfminder3x - Resource Manager was createdd
+13 - String INput and out put was considered to deal with string opeartions in the pdf.
+14 - Parameters for the conversion was created for the pdf miner 3k.
+15 - TextConverted was imported from pdfminer 3k , and was used to create the text using the Resources and IO
+16 - String representation of the Text was returned to the function call
+17 - Test Case for the pdf was developerd and put in the function named ---> testpdf()
+18 - Text was printed out which was being returned.
+19 - Function was writted to get the current directory of the specified folder , where the script was placed
+20 - specification of the folder named "Files".
+21 - Filling in the Files folder with Test PDfs
+22 - Creating another function for listing all the elements in the FOlder in getAllpdfFiles()
+23 - addition of the current directory in the folder
+24 - Creating another function named Convert_list_pdfFiles() for the conversion of the files from pdf  to text
+25 - The function should recieve list of Pdf files from the getAllpdfFiles() function
+26 - Word Files extension , were seperated using filter operation and seperate function to get all the word file
+27 - testing on the pdf conversion by printing the values.
+                        ---- storing in the text Files -----
+28 - Created another function named save_to_text()
+29 - Recieving the current directory
+30 - Static Directory check named "Converted Texts"
+31 - Getting the filename , file data in the parameters
+32 - stripping off the file name last element after \\ or / FILENAME.EXTENSION
+33 - Creating a file named as same as the FILENAME with txt extension
+34 - Encoding the convered text string UTF-8 encoding and writing lines in the file
+35 - closing the file
+                       ----  Word documents ----
+36 - Creating the function named convert all , add the pdf called function and the word called function
+37 - installing the module docx
+38 - Failed to install docx, moved to python-docx reverting..
+39 - installing python-docx for the specified conversion
+40 - test function creation for simple word function testing
+41 - using the docx module creating the read_wordfile() function
+42 - Passing file complete path as directory
+43 - Creating a list , as the docx will read out paragraphs one by one.
+44 - appending in the list
+45 converting list to string and returning
+                       ---- Exceptions ------
+46 - Try Exception Blocks appending at particular places where the errors are expected.
+47 - Appending call to all the convert word and pdf functions , in the form of a list.
+48 - Testing -- > MAC and WINDOWS PATH DIFFERENCE ( TWO directory naming convention )
+
+                       --- Passing the file ----
